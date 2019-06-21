@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 from collections import Counter
 from keras.preprocessing import sequence
 from keras.models import Sequential
