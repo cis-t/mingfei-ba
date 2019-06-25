@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
-
-from collections import Counter
-from keras.preprocessing import sequence
-from keras.models import Sequential
-from keras.layers import Dense, Embedding, LSTM, Bidirectional, Conv1D
 import io
-import itertools
-from gensim.models.fasttext import FastText
+import itertools  as its
 import tensorflow as tf
+import numpy as np
+from collections import Counter
+from keras.models import Sequential,load_model
+from keras.layers import Dense, Embedding, LSTM
+from keras.callbacks import EarlyStopping, ModelCheckpoint
+from gensim.models.fasttext import FastText
+
 
 def fileread(filename):
     """
@@ -110,54 +111,95 @@ def to_ids(words, dictionary):  # TODO derzeit unbenutzt
     return [dictionary.get(w, 0) for w in words]
 
 
-def build_and_evaluate_model(iddict, train_x, train_y, dev_x, dev_y, test_x, test_y):
-    """
-    Builds, trains and evaluates a keras LSTM model.
-    Returns the score of the loss function and accuracy on the test data, as well as the trained model itself
-    """
-    train_x = sequence.pad_sequences([to_ids(doc, iddict) for doc in train_x], maxlen=MAX_LEN)
-    dev_x = sequence.pad_sequences([to_ids(doc, iddict) for doc in dev_x], maxlen=MAX_LEN)
-    test_x = sequence.pad_sequences([to_ids(doc, iddict) for doc in test_x], maxlen=MAX_LEN)
-    standard_vectors = load_vectors('../fastText/[ch]aa')
+def clean_lines(txt_):
+    sents = []
+    with open(txt_, "r") as f:
+        for l in f:
+            if l[0] == "#": continue
+            l = l.strip().split("\t")[-1].split(" ")
+            if len(l) == 0: continue
+            sents.append(l)
+    print("Obtained {} verses from {}.".format(len(sents), txt_))
+    return sents
 
-    # initialize model
+#todo: py2 __init__
+def editor(txt_, min_count=5):
+    sents = clean_lines(txt_)
+    w2c = Counter(" ".join(
+        its.chain.from_iterable(sents)).split(" ")).most_common()
+    w2i = {}
+    for idx, (w, c) in enumerate(w2c):
+        if c < min_count: break
+        w2i[w] = idx
+    w2i["<unk>"] = len(w2i)
+    w2i["</s>"] = len(w2i)
+    i2w = {v: k for k, v in w2i.items()}
+    w2i, i2w = w2i, i2w
+    vocab_size = len(w2i)
+
+
+
+#todo: von Mengjie
+def get_lm_model(vocab_size, flat_len, emb_dim, lstm_dim):
     model = Sequential()
-    # Add layers
-    model.add(Embedding(input_dim=VOCAB_SIZE, output_dim=80))
-    # TODO randomly initalize, update during training of LSTM, perhaps look here - https://bit.ly/2MKKTfl
-    # TODO requires loading the pretrained vectors into numpy matrix first
-    model.add(Bidirectional(LSTM(units=25)))
-    model.add(Dense(1, activation='sigmoid')) # TODO compare to standard_vectors
-    # Compile model
-    model.compile(loss=LOSS_FUNCTION, optimizer=OPTIMIZER, metrics=['accuracy'])
-    # Fit to (train on) training data while validating on development data
-    model.fit(x=train_x, y=train_y, validation_data=(dev_x, dev_y), batch_size=BATCH_SIZE, epochs=EPOCHS)
-    # Evaluate model
-    loss_score, accuracy_score = model.evaluate(test_x, test_y)
+    model.add(Embedding(vocab_size, emb_dim, input_length=flat_len))
+    model.add(LSTM(lstm_dim))
+    model.add(Dense(vocab_size, activation="softmax"))
+    model.compile(loss="categorical_crossentropy", optimizer="adam")
+    print(model.summary())
+    return model
+
+
+if __name__ == "__main__":
+    MAX_LEN = 50
+    FLAT_LEN = 5
+    MIN_COUNT = 5
+    EMB_DIM = 100
+    LSTM_DIM = 100
+    #todo: daten übergeben??
+    edition = BibleEdition('../data/result/segmented_01_jieba.txt', min_count=MIN_COUNT)
+    dl = DataLoader(edition, max_len=MAX_LEN)
+
     
-    return loss_score, accuracy_score, model
+    lm_model = get_lm_model(
+        vocab_size=edition.vocab_size,
+        flat_len=FLAT_LEN,
+        emb_dim=EMB_DIM,
+        lstm_dim=LSTM_DIM)
 
+    NUM_EPOCH = 100
+    BATCH_SIZE = 1024
+    VAL_SPLIT = 0.2
+    SAVED_PATH = "saved_model.pkl"
 
-def main():
-    print('Loading data...')
-#    train_x, train_y, dev_x, dev_y, test_x, test_y = 0  # TODO (x) must each be a list of texts, each text being represented as a list of tokens / (y) must each be a list of labels
+    inference = True
 
-    train_x = fileread('../data/result/segmented_01_jieba.txt')
-    train_y = [0 for _ in train_x]
-    dev_x = fileread('../data/result/segmented_01_spm.txt')
-    dev_y = [0 for _ in dev_x]
-    test_x = dev_x
-    test_y = dev_y
-
-    word_ids = create_dictionary((train_x + dev_x + test_x), VOCAB_SIZE)
-    print(len(train_x), 'training samples')
-    print(len(dev_x), 'development samples')
-    
-    loss_score, accuracy_score, model = build_and_evaluate_model(word_ids, train_x, train_y, dev_x, dev_y, test_x, test_y)
-    print('')
-    print(LOSS_FUNCTION, 'score on test data:', loss_score)
-    print('accuracy on test data:', accuracy_score)
-
-
-if __name__ == '__main__':
-    main()
+    if not inference:
+        stop = EarlyStopping(  # vermeidung von Overfitting
+            monitor="val_loss", min_delta=0,
+            patience=5, verbose=1, mode="auto")
+        saver = ModelCheckpoint(
+            SAVED_PATH, monitor="val_loss",
+            verbose=0, save_best_only=True)
+        history = lm_model.fit(
+            dl.X, dl.y,
+            batch_size=BATCH_SIZE,
+            epochs=NUM_EPOCH,
+            verbose=1,
+            validation_split=VAL_SPLIT,
+            callbacks=[stop, saver])
+    else:
+        lm_model = load_model(SAVED_PATH)
+        gold_tokens, pred_tokens = [], []
+        for step in range(1000):
+            inp = dl.X[step]
+            pred = np.argmax(lm_model.predict(np.asarray([inp])))
+            gold_tokens.append(edition.i2w[dl._y[step]])
+            pred_tokens.append(edition.i2w[pred])
+            if step % 50 == 0:
+                print("gold:")
+                print(" ".join(gold_tokens))
+                print("pred:")
+                print(" ".join(pred_tokens))
+                print("=" * 20)
+                gold_tokens, pred_tokens = [], []

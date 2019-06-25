@@ -5,12 +5,11 @@ from keras.layers import Embedding, LSTM, Dense
 from keras.callbacks import EarlyStopping, ModelCheckpoint
 
 from collections import Counter
-
 import itertools as its
 import numpy as np
 
 
-class BibleEdition(object):
+class BibleEdition(object): #todo: object als argument??
 	def __init__(self, txt_, min_count=5):
 		self.sents = self.clean_lines(txt_)
 		w2c = Counter(" ".join(
@@ -60,7 +59,7 @@ class DataLoader(object):
 		self._y = y
 
 
-def get_lm_model(vocab_size, flat_len, emb_dim, lstm_dim):
+	def get_lm_model(vocab_size, flat_len, emb_dim, lstm_dim):
 	model = Sequential()
 	model.add(Embedding(vocab_size, emb_dim, input_length=flat_len))
 	model.add(LSTM(lstm_dim))
@@ -92,7 +91,7 @@ if __name__ == "__main__":
 	inference = True
 
 	if not inference:
-		stop = EarlyStopping(
+		stop = EarlyStopping(    #vermeidung von Overfitting
 			monitor="val_loss", min_delta=0, 
 			patience=5, verbose=1, mode="auto")
 		saver = ModelCheckpoint(
@@ -114,9 +113,9 @@ if __name__ == "__main__":
 			gold_tokens.append(edition.i2w[dl._y[step]])
 			pred_tokens.append(edition.i2w[pred])
 			if step % 50 == 0:
-				print ("gold:")
-				print (" ".join(gold_tokens))
-				print ("pred:")
-				print (" ".join(pred_tokens))
-				print ("=" * 20)
+				print("gold:")
+				print(" ".join(gold_tokens))
+				print("pred:")
+				print(" ".join(pred_tokens))
+				print("=" * 20)
 				gold_tokens, pred_tokens = [], []

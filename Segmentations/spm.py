@@ -20,23 +20,20 @@ def segment_with_spm(inp_, out_, model_name, vocab_size):
     
     with open(inp_, 'r') as file:
         # read in the unsegmented lines
+        result = re.sub(r' \—\"\—|世 界 文 学 名 著 百 部|红 与 黑|\,|\—\!\—|\—\!\"\—|\—\!(.)\!\—| \—\!\"\#\—|\—\!\"\#\—| \—\"\#\$\—| \—\!\!\"\—|\—\"\#\"\—|\—\%\&\’\—|" "|\—.*\—', '', file.read())
+        result = re.sub(r'\n\n\n*','', result)
+        verses = re.split(r'[?。! ; ,]', result)
 
-
-        result = re.sub(r' \—\"\—|世 界 文 学 名 著 百 部|红 与 黑|\—\!\—|\—\!\"\—|\—\!(.)\!\—| \—\!\"\#\—|  \—\!\"\#\—| \—\"\#\$\—| \—\!\!\"\—|\—\"\#\"\—|\—\%\&\’\—|\—.*\—', " ", file.read())
-        result = re.sub(r'\n\n\n*', '', result)
-        verses = re.split('[?。!; ]', result)
-        # verses = [l.strip() for l in f]
+        #verses = [l.strip() for l in verses]
         
         # use the loaded model sp to segment the unsegmented lines
     segmented_verses = [sp.EncodeAsPieces(v) for v in verses]
     assert len(segmented_verses) == len(verses)
 
-
-
     # write out segmented results
     with open(out_, 'w') as f:
         for l in segmented_verses:
-            f.write(re.sub(r'▁', '\n', "{}\n".format("\n".join(l))))
+            f.write("{}\n".format(" ".join(l)))
 
     print("Segmented file written to {}".format(out_))
 
@@ -45,8 +42,8 @@ def segment_with_spm(inp_, out_, model_name, vocab_size):
 
 if __name__ == "__main__":
     segment_with_spm(
-        inp_="./data/test/01.txt",
+        inp_="../data/test/01.txt",
         model_name="spm",
-        out_="./data/result/segmented_01_spm.txt",
+        out_="../data/result/segmented_01_spm.txt",
         vocab_size=20000          #max
     )
