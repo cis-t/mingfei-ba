@@ -18,7 +18,15 @@ def segment_with_jieba(inp_, out_):
 
 
 if __name__ == '__main__':
+    
     segment_with_jieba(
         inp_='../data/test/01.txt',
         out_='../data/result/segmented_01_jieba.txt'
+    )
+
+
+
+    segment_with_jieba(
+        inp_='../data/test/02.txt',
+        out_='../data/result/segmented_02_jieba.txt'
     )

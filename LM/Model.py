@@ -1,18 +1,25 @@
 from keras.models import Sequential, load_model
-from keras.layers import Embedding, LSTM, Dense
+from keras.layers import Embedding, LSTM, Dense, Bidirectional
 from keras.callbacks import EarlyStopping, ModelCheckpoint
 import numpy as np
 from LM.Dataloader import DataLoader
 from LM.Editor import Editor
 from sklearn.metrics import accuracy_score
+
 from keras.metrics import categorical_accuracy
+from keras.preprocessing import sequence
+
+LOSS_FUNCTION = "categorical_crossentropy"
+OPTIMIZER ="adam"
+ACTIVATION = "softmax"
+
 
 def get_lm_model(vocab_size, flat_len, emb_dim, lstm_dim):
     model = Sequential()
     model.add(Embedding(vocab_size, emb_dim, input_length=flat_len))
     model.add(LSTM(lstm_dim))
-    model.add(Dense(vocab_size, activation="softmax"))
-    model.compile(loss="categorical_crossentropy", optimizer="adam")
+    model.add(Dense(vocab_size, activation=ACTIVATION))
+    model.compile(loss=LOSS_FUNCTION, optimizer=OPTIMIZER)
     print(model.summary())
     return model
 
@@ -36,7 +43,7 @@ def trainModel(editor, model_type, saved_path, notYetTrained=True):
     VAL_SPLIT = 0.2
     SAVED_PATH = saved_path
 
-    if notYetTrained:
+    if not notYetTrained:
         # vermeidung von Overfitting
         stop = EarlyStopping(
             monitor="val_loss", min_delta=0,
@@ -54,7 +61,7 @@ def trainModel(editor, model_type, saved_path, notYetTrained=True):
     else:
         lm_model = load_model(SAVED_PATH)
 
-        lm_model.evaluate()
+        #lm_model.evaluate()
 
         gold_tokens, pred_tokens = [], []
         for step in range(1000):
@@ -83,11 +90,19 @@ if __name__ == "__main__":
     LSTM_DIM = 100
 
     editor = Editor('../data/result/segmented_01_spm.txt', '../data/result/segmented_01_jieba.txt', MIN_COUNT)
+
+
     editor_spm = editor.spm
     editor_jieba = editor.jieba
 
+    print('SPM')
     trainModel(editor, 'spm', 'saved_spm.pkl', True)
     trainModel(editor, 'spm', 'saved_spm.pkl', False)
+    print('Jieba')
+    trainModel(editor, 'jieba', 'saved_jb.pkl',True)
+    trainModel(editor, 'jieba', 'saved_jb.pkl',False)
+
+
 
   #  trainModel(editor_jieba, 'saved_jieba.pkl')
 

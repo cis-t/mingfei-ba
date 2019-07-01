@@ -12,7 +12,7 @@ class DataLoader():
             raise ValueError('invalid model type')
 
         X, y = [], []
-        for sent in editor['sents']:
+        for sent in editor['training']:
             if len(sent) < max_len:
                 sent += ["</s>"] * (max_len - len(sent))
             else:

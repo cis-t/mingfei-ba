@@ -47,3 +47,9 @@ if __name__ == "__main__":
         out_="../data/result/segmented_01_spm.txt",
         vocab_size=20000          #max
     )
+    segment_with_spm(
+        inp_="../data/test/02.txt",
+        model_name="spm",
+        out_="../data/result/segmented_02_spm.txt",
+        vocab_size=20000  # max
+    )
