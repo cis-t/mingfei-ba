@@ -1,6 +1,6 @@
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 from keras import optimizers
 from keras.utils import to_categorical
@@ -61,10 +61,10 @@ class DataLoader(object):
 def get_lm_model(vocab_size, flat_len, emb_dim, lstm_dim):
 	model = Sequential()
 	model.add(Embedding(vocab_size, emb_dim, input_length=flat_len))
-	model.add(LSTM(lstm_dim))
+	model.add(GRU(lstm_dim))
 	model.add(Dense(vocab_size, activation="softmax"))
-	opt = optimizers.SGD(lr=0.001, clipnorm=1.)
-	model.compile(loss="categorical_crossentropy", optimizer=opt)
+	# opt = optimizers.SGD(lr=0.01, clipnorm=1.)
+	model.compile(loss="categorical_crossentropy", optimizer="adam")
 	print(model.summary())
 	return model
 
@@ -72,8 +72,8 @@ def get_lm_model(vocab_size, flat_len, emb_dim, lstm_dim):
 if __name__ == "__main__":
 	FLAT_LEN = 50
 	MIN_COUNT = 1
-	EMB_DIM = 2048
-	LSTM_DIM = 2048
+	EMB_DIM = 512
+	LSTM_DIM = 512
 
 	edition = BibleEdition("eng.txt", min_count=MIN_COUNT)
 	dl = DataLoader(edition, flat_len=FLAT_LEN)
@@ -84,7 +84,7 @@ if __name__ == "__main__":
 	VAL_SPLIT = 0.2
 	SAVED_PATH = "saved_model.pkl"
 
-	inference = False
+	inference = True
 
 	if not inference:
 		stop = EarlyStopping(monitor="val_loss", min_delta=0, patience=5, verbose=1, mode="auto")
