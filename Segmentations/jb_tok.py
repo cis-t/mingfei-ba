@@ -3,6 +3,7 @@ import re
 import jieba
 
 
+
 def segment_with_jieba(inp_, out_):
     with open(inp_, 'r') as file:
         # read in the unsegmented lines

@@ -40,6 +40,7 @@ def segment_with_spm(inp_, out_, model_name, vocab_size):
 
 
 
+
 if __name__ == "__main__":
     segment_with_spm(
         inp_="../data/test/01.txt",
