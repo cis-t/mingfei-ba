@@ -21,6 +21,7 @@ class DataLoader():
         self.test_X, self.test_Y, self.test_original_Y = self.get(editor, 'test', flat_len)
 
 
+
     @classmethod
     def get(cls, editor, type, flat_len):
         X, Y = [], []

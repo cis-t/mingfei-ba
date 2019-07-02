@@ -8,6 +8,7 @@ from gensim.models.fasttext import FastText
 
 
 
+
 class Editor():
     def __init__(self, mod_txt_spm, mod_txt_jieba,cls_txt_spm,cls_txt_jieba, min_count=5):
         self.mod_spm = self.load(mod_txt_spm, min_count, 'mod_spm')
