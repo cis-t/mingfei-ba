@@ -87,6 +87,7 @@ if __name__ == "__main__":
 	VAL_SPLIT = 0.2
 	SAVED_PATH = "saved_model.pkl"
 
+	# evaluted
 	inference = True
 
 	if not inference:

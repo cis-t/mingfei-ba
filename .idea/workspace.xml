@@ -7,10 +7,12 @@
       <change beforePath="$PROJECT_DIR$/LM/Editor.py" beforeDir="false" afterPath="$PROJECT_DIR$/LM/Editor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LM/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/LM/Model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LM/lm_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/LM/lm_keras.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LM/lstm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LM/lstm_a.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Segmentations/jb_tok.py" beforeDir="false" afterPath="$PROJECT_DIR$/Segmentations/jb_tok.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentations/spm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Segmentations/spm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentations/spm.model" beforeDir="false" afterPath="$PROJECT_DIR$/Segmentations/spm.model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentations/spm.vocab" beforeDir="false" afterPath="$PROJECT_DIR$/Segmentations/spm.vocab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/result/segmented_02_jieba.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/result/segmented_02_jieba.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/result/segmented_02_spm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/result/segmented_02_spm.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test/02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/test/02.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,49 +21,52 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/mingfei_ba$Model.coverage" NAME="Model Coverage Results" MODIFIED="1561947960058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LM" />
-    <SUITE FILE_PATH="coverage/mingfei_ba$spm.coverage" NAME="spm Coverage Results" MODIFIED="1561496680672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Segmentations" />
+    <SUITE FILE_PATH="coverage/mingfei_ba$Model.coverage" NAME="Model Coverage Results" MODIFIED="1562054614724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LM" />
+    <SUITE FILE_PATH="coverage/mingfei_ba$spm.coverage" NAME="spm Coverage Results" MODIFIED="1561952487607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Segmentations" />
     <SUITE FILE_PATH="coverage/mingfei_ba$lm_keras.coverage" NAME="lm_keras Coverage Results" MODIFIED="1561900895780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LM" />
-    <SUITE FILE_PATH="coverage/mingfei_ba$Dataloader.coverage" NAME="Dataloader Coverage Results" MODIFIED="1561898694669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LM" />
-    <SUITE FILE_PATH="coverage/mingfei_ba$jb_tok.coverage" NAME="jb_tok Coverage Results" MODIFIED="1561495831187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Segmentations" />
+    <SUITE FILE_PATH="coverage/mingfei_ba$Editor.coverage" NAME="Editor Coverage Results" MODIFIED="1562051930670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LM" />
+    <SUITE FILE_PATH="coverage/mingfei_ba$Dataloader.coverage" NAME="Dataloader Coverage Results" MODIFIED="1562053893040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LM" />
+    <SUITE FILE_PATH="coverage/mingfei_ba$jb_tok.coverage" NAME="jb_tok Coverage Results" MODIFIED="1562048055454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Segmentations" />
     <SUITE FILE_PATH="coverage/mingfei_ba$editor.coverage" NAME="editor Coverage Results" MODIFIED="1561897669557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LM" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1555949114">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="model" value="2" />
-          <entry key="py" value="20" />
-          <entry key="txt" value="31" />
+          <entry key="py" value="37" />
+          <entry key="txt" value="43" />
           <entry key="vocab" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Python" value="20" />
+          <entry key="PLAIN_TEXT" value="46" />
+          <entry key="Python" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="py" value="4503" />
-          <entry key="txt" value="15" />
+          <entry key="py" value="6318" />
+          <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="4503" />
+          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="Python" value="6318" />
         </counts>
       </usages-collector>
     </session>
@@ -72,26 +77,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test/01.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/test/02.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LM/Dataloader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="5" column="51" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="51" />
+            <state relative-caret-position="46">
+              <caret line="20" column="91" selection-start-line="20" selection-start-column="91" selection-end-line="20" selection-end-column="91" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#1547#2303#1" />
               </folding>
             </state>
           </provider>
@@ -100,22 +92,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LM/Editor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+            <state relative-caret-position="2028">
+              <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
               <folding>
-                <element signature="e#26#35#0" expanded="true" />
-                <element signature="e#2824#3695#0" />
-                <marker date="1561946701480" expanded="true" signature="153:4173" ph="..." />
+                <element signature="e#3177#3554#0" />
+                <element signature="e#3592#4463#0" />
+                <element signature="e#3865#4278#1" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Segmentations/jb_tok.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+            <state relative-caret-position="296">
+              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+              <folding>
+                <element signature="e#24#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,24 +118,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LM/lm_keras.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="32">
+              <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1561901183361" expanded="true" signature="1741:1742" ph="..." />
+                <marker date="1561987297939" expanded="true" signature="1741:1742" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LM/Model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="273">
+              <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -148,17 +140,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/result/segmented_01_jieba.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2379">
-              <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+            <state relative-caret-position="234">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/result/segmented_01_spm.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/result/segmented_02_jieba.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Segmentations/spm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="50" column="50" lean-forward="true" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+            <state relative-caret-position="373">
+              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -179,8 +185,20 @@
       <find>神学院的学生</find>
       <find>神学院</find>
       <find>JI</find>
-      <find>jieba</find>
+      <find />
+      <find>MODERN</find>
+      <find>CL</find>
       <find>jie</find>
+      <find>jieba</find>
+      <find>SAV</find>
+      <find>mod_</find>
+      <find>dl</find>
+      <find>JIEba</find>
+      <find>Class</find>
+      <find>SPM</find>
+      <find>JIE</find>
+      <find>Max</find>
+      <find>Jie</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,14 +211,16 @@
         <option value="$PROJECT_DIR$/data/result/segmented_01_jieba.txt" />
         <option value="$PROJECT_DIR$/data/test/te.txt" />
         <option value="$PROJECT_DIR$/LM/editor.py" />
-        <option value="$PROJECT_DIR$/LM/lm_keras.py" />
         <option value="$PROJECT_DIR$/LM/lstm_a.py" />
         <option value="$PROJECT_DIR$/LM/lstm.py" />
-        <option value="$PROJECT_DIR$/LM/Editor.py" />
-        <option value="$PROJECT_DIR$/LM/Model.py" />
-        <option value="$PROJECT_DIR$/LM/Dataloader.py" />
-        <option value="$PROJECT_DIR$/Segmentations/jb_tok.py" />
         <option value="$PROJECT_DIR$/Segmentations/spm.py" />
+        <option value="$PROJECT_DIR$/data/test/02.txt" />
+        <option value="$PROJECT_DIR$/LM/lm_keras.py" />
+        <option value="$PROJECT_DIR$/data/result/segmented_02_jieba.txt" />
+        <option value="$PROJECT_DIR$/Segmentations/jb_tok.py" />
+        <option value="$PROJECT_DIR$/LM/Editor.py" />
+        <option value="$PROJECT_DIR$/LM/Dataloader.py" />
+        <option value="$PROJECT_DIR$/LM/Model.py" />
       </list>
     </option>
   </component>
@@ -219,6 +239,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,13 +250,34 @@
             <path>
               <item name="mingfei-ba" type="b2602c69:ProjectViewProjectNode" />
               <item name="mingfei-ba" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mingfei-ba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mingfei-ba" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="result" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mingfei-ba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mingfei-ba" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mingfei-ba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mingfei-ba" type="462c0819:PsiDirectoryNode" />
+              <item name="LM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mingfei-ba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mingfei-ba" type="462c0819:PsiDirectoryNode" />
               <item name="Segmentations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -285,6 +327,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Editor" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="mingfei-ba" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LM" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LM/Editor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mingfei-ba" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -307,7 +371,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="editor" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="jb_tok" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mingfei-ba" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -315,34 +379,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LM" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Segmentations" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LM/Editor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lm_keras" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="mingfei-ba" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LM" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LM/lm_keras.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Segmentations/jb_tok.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -374,18 +416,18 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.spm" />
-      <item itemvalue="Python.lm_keras" />
-      <item itemvalue="Python.editor" />
-      <item itemvalue="Python.Dataloader" />
       <item itemvalue="Python.Model" />
+      <item itemvalue="Python.jb_tok" />
+      <item itemvalue="Python.spm" />
+      <item itemvalue="Python.Editor" />
+      <item itemvalue="Python.Dataloader" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Model" />
-        <item itemvalue="Python.lm_keras" />
         <item itemvalue="Python.Dataloader" />
-        <item itemvalue="Python.editor" />
+        <item itemvalue="Python.Editor" />
+        <item itemvalue="Python.jb_tok" />
         <item itemvalue="Python.spm" />
       </list>
     </recent_temporary>
@@ -414,19 +456,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982079" visible="true" weight="0.13018598" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982079" visible="true" weight="0.13304721" />
       <window_info id="Structure" order="1" sideWeight="0.50179213" side_tool="true" weight="0.13018598" />
       <window_info id="Favorites" order="2" sideWeight="0.50179213" side_tool="true" weight="0.13018598" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6698795" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6698795" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32771084" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.5072289" />
@@ -438,22 +481,22 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13018598" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982079" weight="0.13304721" />
+      <window_info id="Structure" order="1" sideWeight="0.50179213" side_tool="true" weight="0.13018598" />
+      <window_info id="Favorites" order="2" sideWeight="0.50179213" side_tool="true" weight="0.13018598" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36024097" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5674699" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32882273" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32771084" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.5072289" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32882273" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32771084" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -483,13 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/result/segmented_01_spm.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LM/w2v.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
@@ -497,90 +533,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LM/lstm_a.py">
+    <entry file="file://$PROJECT_DIR$/LM/lstm_a.py" />
+    <entry file="file://$PROJECT_DIR$/LM/lstm.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/engine/saving.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="78">
+          <caret line="416" selection-start-line="416" selection-end-line="416" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/h5py/_hl/files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1124">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36036">
+          <caret line="951" selection-start-line="951" selection-end-line="951" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/01.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/02.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790296">
+          <caret line="20264" selection-start-line="20264" selection-end-line="20264" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/result/segmented_02_spm.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Segmentations/spm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/result/segmented_01_jieba.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Segmentations/jb_tok.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/result/segmented_01_jieba.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2379">
-          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LM/lstm.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/LM/lm_keras.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="32">
+          <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <marker date="1561901183361" expanded="true" signature="1741:1742" ph="..." />
+            <marker date="1561987297939" expanded="true" signature="1741:1742" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LM/Editor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+        <state relative-caret-position="2028">
+          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
           <folding>
-            <element signature="e#26#35#0" expanded="true" />
-            <element signature="e#2824#3695#0" />
-            <marker date="1561946701480" expanded="true" signature="153:4173" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LM/Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#3177#3554#0" />
+            <element signature="e#3592#4463#0" />
+            <element signature="e#3865#4278#1" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LM/Dataloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" column="51" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="51" />
+        <state relative-caret-position="46">
+          <caret line="20" column="91" selection-start-line="20" selection-start-column="91" selection-end-line="20" selection-end-column="91" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#1547#2303#1" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/01.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test/02.txt">
+    <entry file="file://$PROJECT_DIR$/data/result/segmented_02_jieba.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Segmentations/spm.py">
+    <entry file="file://$PROJECT_DIR$/data/result/segmented_01_spm.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="50" column="50" lean-forward="true" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+        <state relative-caret-position="312">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Segmentations/jb_tok.py">
+    <entry file="file://$PROJECT_DIR$/LM/Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        <state relative-caret-position="273">
+          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
